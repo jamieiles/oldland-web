@@ -1,0 +1,3 @@
+[submodule "oldland"]
+	path = oldland
+	url = git@github.com:jamieiles/oldland-cpu.git

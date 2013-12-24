@@ -1,0 +1,2 @@
+include: ['.htaccess', 'docs']
+exclude: ['refresh-gh', 'rtl', 'fpga', 'oldland-jtag', 'tools', 'scripts', 'oldland']

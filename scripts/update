@@ -1,0 +1,20 @@
+#!/bin/bash
+set -xe
+
+pushd oldland
+git fetch
+git reset --hard HEAD
+git clean -fdx
+git checkout origin/master
+popd
+
+bundle exec jekyll build
+
+pushd oldland
+git checkout gh-pages
+git reset --hard origin/gh-pages
+git rm -rf *
+rsync -ax --exclude=Gemfile.lock ../_site/ .
+git add -A
+git commit -m "Update site."
+popd
