@@ -26,6 +26,7 @@ Documentation
 - [Architecture](docs/design.html)
 - [JTAG protocol](docs/jtag.html)
 - [How to simulate](docs/simulating.html)
+- [Memory busses](docs/memory.html)
 
 Testing
 -------
