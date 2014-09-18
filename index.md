@@ -27,6 +27,7 @@ Documentation
 - [JTAG protocol](docs/jtag.html)
 - [How to simulate](docs/simulating.html)
 - [Memory busses](docs/memory.html)
+- [SPI master](docs/spimaster.html)
 
 Testing
 -------
