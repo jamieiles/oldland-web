@@ -13,7 +13,8 @@ internal SRAM, an SDRAM controller, SPI master and UART.
 
 Included is an instruction set simulator, tools for debugging in gtkwave, a
 bootloader (and associated bootrom code), lua based debugger, JTAG for
-hardware.  There is a GCC retarget for oldland-elf.
+hardware.  There is a GCC retarget for oldland-elf and a u-boot port that runs
+in both simulation and on the FPGA.
 
 The FPGA target is for a DE0 nano and runs at 50MHz, though it should
 synthesize at &gt;80MHz at the moment.
