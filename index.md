@@ -33,7 +33,7 @@ Testing
 -------
 
    1. Download
-      [binutils-oldland](https://github.com/jamieiles/binutils-oldland") and
+      [binutils-gdb-oldland](https://github.com/jamieiles/binutils-gdb-oldland") and
       build with:  
 ```
 ./configure --target=oldland-elf`  
