@@ -15,6 +15,10 @@ layout: default
 <p><strong>Size:</strong> {{ cpu.icache.size }}</p>
 <p><strong>Line size:</strong> {{ cpu.icache.line_size }}</p>
 
+<h2>Data Cache</h2>
+<p><strong>Size:</strong> {{ cpu.dcache.size }}</p>
+<p><strong>Line size:</strong> {{ cpu.dcache.line_size }}</p>
+
 <h2>Memory Map</h2>
 <table>
 <tr><th>Address</th><th>Size</th><th>Name</th></tr>
