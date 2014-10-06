@@ -26,3 +26,25 @@ layout: default
   <tr><td>{{ p.address | HexFilter::as_hex }}</td><td>{{ p.size }}</td><td>{{ p.name }}</td></tr>
 {% endfor %}
 </table>
+
+<h2>Peripheral Register Maps</h2>
+
+{% for p in site.data.keynsham.peripherals | sort: "address" %}
+{% if p.regmap != null %}
+<h3>{{ p.name }}</h3>
+<table>
+<tr><th>Offset</th><th>Name</th><th>Fields</th></tr>
+	{% for reg in p.regmap | sort: "offset" %}
+	  <tr><td>{{ reg[1].offset | HexFilter::as_hex }}</td><td>{{ reg[0] }}</td>
+	  <td>
+		<ul>
+		{% for field in reg[1].fields | sort: "offset" %}
+		<li>[{{ field[1].width | plus : field[1].offset | minus : 1 }}:{{ field[1].offset }}] {{ field[0] }} </li>
+		{% endfor %}
+		</ul>
+	  </td>
+	  </tr>
+	{% endfor %}
+</table>
+{% endif %}
+{% endfor %}
