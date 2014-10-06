@@ -34,7 +34,7 @@ layout: default
 <h3>{{ p.name }}</h3>
 <table>
 <tr><th>Offset</th><th>Name</th><th>Fields</th></tr>
-	{% for reg in p.regmap | sort: "offset" %}
+	{% for reg in site.data.regmaps[p.regmap] | sort: "offset" %}
 	  <tr><td>{{ reg[1].offset | HexFilter::as_hex }}</td><td>{{ reg[0] }}</td>
 	  <td>
 		<ul>
