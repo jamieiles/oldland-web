@@ -33,35 +33,31 @@ Documentation
 Testing
 -------
 
-   1. Download
-      [binutils-gdb-oldland](https://github.com/jamieiles/binutils-gdb-oldland") and
-      build with:  
-```
+   - Download [binutils-gdb-oldland](https://github.com/jamieiles/binutils-gdb-oldland") and build with:  
+{% highlight bash %}
 ./configure --target=oldland-elf`  
 make all`  
 make install`
-```
+{% endhighlight %}
 
-   2. Download
-      [gcc-oldland](https://github.com/jamieiles/gcc-oldland) and build with:
-```
+   - Download [gcc-oldland](https://github.com/jamieiles/gcc-oldland) and build with:
+{% highlight bash %}
 ./configure --target=oldland-elf --disable-libquadmath --disable-libssp --enable-languages=c
 make all
 make install
-```
+{% endhighlight %}
 
-   3. Make sure that the `oldland-elf-*` tools are in your path and build the CPU
-      + tools with:  
-```
+   - Make sure that the `oldland-elf-*` tools are in your path and build the CPU + tools with:  
+{% highlight bash %}
 mkdir BUILD
 cd BUILD
 cmake -DCMAKE_ISNTALL_PREFIX:PATH=INSTALL_PREFIX ..
 make all install
-```
+{% endhighlight %}
 
-   4. Add `${INSTALL_PREFIX}/bin` to your path.
+   - Add `${INSTALL_PREFIX}/bin` to your path.
 
-   5. Run `oldland-test` to run the self-tests.
+   - Run `oldland-test` to run the self-tests.
 
 Running On Hardware
 -------------------
