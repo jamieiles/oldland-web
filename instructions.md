@@ -6,14 +6,44 @@ layout: default
 <h1>Oldland Instruction Set</h1>
 
 <a id="top" />
+<p>Arithmetic/Bitwise instructions</p>
 <ul>
 {% for instr in site.data.instructions.instructions %}
-<li><a href="#{{ instr[0] }}">{{ instr[0] }}</a></li>
+{% if instr[1].class == 0 %}
+<li class="instrdef"><a href="#{{ instr[0] }}">{{ instr[0] }}</a></li>
+{% endif %}
+{% endfor %}
+</ul>
+
+<p>Call/Branch/Exception instructions</p>
+<ul>
+{% for instr in site.data.instructions.instructions %}
+{% if instr[1].class == 1 %}
+<li class="instrdef"><a href="#{{ instr[0] }}">{{ instr[0] }}</a></li>
+{% endif %}
+{% endfor %}
+</ul>
+
+<p>Load/Store instructions</p>
+<ul>
+{% for instr in site.data.instructions.instructions %}
+{% if instr[1].class == 2 %}
+<li class="instrdef"><a href="#{{ instr[0] }}">{{ instr[0] }}</a></li>
+{% endif %}
+{% endfor %}
+</ul>
+
+<p>Miscellaneous instructions</p>
+<ul>
+{% for instr in site.data.instructions.instructions %}
+{% if instr[1].class == 3 %}
+<li class="instrdef"><a href="#{{ instr[0] }}">{{ instr[0] }}</a></li>
+{% endif %}
 {% endfor %}
 </ul>
 
 {% for instr in site.data.instructions.instructions %}
-<a id="{{ instr[0] }}"><h2>{{ instr[0] }}</h2></a>
+<h2><a id="{{ instr[0] }}">{{ instr[0] }}</a></h2>
 <p><strong>Class: {{ instr[1].class }}, Opcode: {{ instr[1].opcode }}</strong></p>
 <h3>Description</h3>
 <p><em>{{ instr[1].description | escape }}</em></p>
