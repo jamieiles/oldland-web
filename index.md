@@ -7,17 +7,17 @@ Introduction
 ------------
 
 Oldland is a 32-bit RISC CPU designed primarily to learn more about Verilog
-and FPGA's.  At the moment this consists of the CPU core itself (Oldland), and
+and FPGA's.  The project consists of the CPU core itself (Oldland), and
 a SoC implementation (Keynsham) that includes the CPU core, on-chip bootrom,
 internal SRAM, an SDRAM controller, SPI master and UART.
 
 Included is an instruction set simulator, tools for debugging in gtkwave, a
 bootloader (and associated bootrom code), lua based debugger, JTAG for
-hardware.  There is a GCC retarget for oldland-elf and a u-boot port that runs
-in both simulation and on the FPGA.
+hardware.  There is a GCC+binutils retarget for oldland-elf and a u-boot port
+that runs in both simulation and on the FPGA.
 
-The FPGA target is for a DE0 nano and runs at 50MHz, though it should
-synthesize at &gt;80MHz at the moment.
+The Terasic DE0-nano board using an Altera Cyclone IV is the supported board
+running at ~75MHz on slow silicon @85°C.
 
 Documentation
 -------------
