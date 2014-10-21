@@ -12,10 +12,12 @@ layout: default
 <p><strong>Clock Speed:</strong> {{ cpu.clock_speed }}</p>
 
 <h2>Instruction Cache</h2>
+<p><strong>Ways:</strong> {{ cpu.icache.num_ways }}</p>
 <p><strong>Size:</strong> {{ cpu.icache.size }}</p>
 <p><strong>Line size:</strong> {{ cpu.icache.line_size }}</p>
 
 <h2>Data Cache</h2>
+<p><strong>Ways:</strong> {{ cpu.dcache.num_ways }}</p>
 <p><strong>Size:</strong> {{ cpu.dcache.size }}</p>
 <p><strong>Line size:</strong> {{ cpu.dcache.line_size }}</p>
 
