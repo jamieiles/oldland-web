@@ -28,6 +28,7 @@ Documentation
 - [JTAG protocol](docs/jtag.html)
 - [How to simulate](docs/simulating.html)
 - [Memory busses](docs/memory.html)
+- [TLBs](docs/tlb.html)
 - [SPI master](docs/spimaster.html)
 - [Boot process](docs/booting.html)
 
