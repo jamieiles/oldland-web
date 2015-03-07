@@ -60,7 +60,10 @@ layout: default
     {% endif %}
   {% endfor %}
   </ul>
-<p><a href="#top">top of page</a></p>
 {% endif %}
+{% if instr[1].privileged %}
+<p><strong>Privileged instruction.</strong></p>
+{% endif %}
+<p><a href="#top">top of page</a></p>
 
 {% endfor %}
