@@ -7,6 +7,7 @@ Introduction
 ------------
 
 Oldland is a 32-bit RISC CPU targeted at FPGAs.  The main features are:
+![Oldland-core](docs/oldland-core.svg)
 
   - 5 stage load/store pipeline.
   - 16 general purpose registers.
@@ -20,6 +21,7 @@ Oldland is a 32-bit RISC CPU targeted at FPGAs.  The main features are:
   - User and supervisor modes.
 
 Keynsham is a SoC using Oldland as the core and has a number of peripherals:
+![Keynsham-soc](docs/keynsham-soc.svg)
 
  - 32MB SDR SDRAM controller.
  - SPI master with configurable number of chip selects.
