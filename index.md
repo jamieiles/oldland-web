@@ -57,9 +57,9 @@ Testing
 
    - Download [binutils-gdb-oldland](https://github.com/jamieiles/binutils-gdb-oldland") and build with:  
 {% highlight bash %}
-./configure --target=oldland-elf`  
-make all`  
-make install`
+./configure --target=oldland-elf
+make all
+make install
 {% endhighlight %}
 
    - Download [gcc-oldland](https://github.com/jamieiles/gcc-oldland) and build with:
