@@ -34,7 +34,7 @@ Keynsham is a SoC using Oldland as the core and has a number of peripherals:
 
 There is a C model along with Icarus and Verilator RTL simulations.  The
 Keynsham SoC can be synthesized to run on a Terasic DE0 Nano.  There are ports
-of binutils, gcc, newlib and u-boot available.
+of binutils, gcc, newlib, u-boot and RTEMS available.
 
 The Terasic DE0-nano board using an Altera Cyclone IV is the supported board
 running at ~75MHz on slow silicon @85°C.
