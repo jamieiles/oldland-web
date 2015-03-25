@@ -55,39 +55,20 @@ Documentation
 Testing
 -------
 
-All builds should be carried out from outside of the source directories e.g.
-BUILD/binutils, BUILD/gcc, BUILD/newlib etc.
-
-   - Download [binutils-gdb-oldland](https://github.com/jamieiles/binutils-gdb-oldland") and build with:  
+   - Clone [oldland-toolchain](https://github.com/jamieiles/oldland-toolchain)
+   and build with:
 {% highlight bash %}
-../binutils-gdb-oldland/configure --target=oldland-elf
-make all
-make install
+git clone https://github.com/jamieiles/oldland-toolchain.git
+cd oldland-toolchain
+./build-oldland-elf
+. oldland-toolchain-env
 {% endhighlight %}
 
-   - Download [gcc-oldland](https://github.com/jamieiles/gcc-oldland) and build with:
+   - Clone [oldland-cpu](https://github.com/jamieiles/oldland-cpu.git) and
+   build with:
 {% highlight bash %}
-../gcc-oldland/configure --target=oldland-elf --disable-libquadmath --disable-libssp --enable-languages=c --disable-shared --with-headers --enable-multilib --with-newlib
-make all-gcc
-make install-gcc
-{% endhighlight %}
-
-   - Download [newlib-oldland](https://github.com/jamieiles/newlib-oldland) and build with:
-{% highlight bash %}
-../newlib-oldland/configure --target=oldland-elf --with-newlib
-make all
-make install
-{% endhighlight %}
-
-   - Build the final compiler with:
-{% highlight bash %}
-cd gcc
-make all
-make install
-{% endhighlight %}
-
-   - Make sure that the `oldland-elf-*` tools are in your path and build the CPU + tools with:  
-{% highlight bash %}
+git clone https://github.com/jamieiles/oldland-cpu.git
+cd oldland-cpu
 mkdir BUILD
 cd BUILD
 cmake -DCMAKE_ISNTALL_PREFIX:PATH=INSTALL_PREFIX ..
