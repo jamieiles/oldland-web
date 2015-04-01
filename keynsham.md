@@ -6,7 +6,7 @@ layout: default
 <h1>Keynsham SoC Configuration</h1>
 
 <h2>CPU</h2>
-{% assign cpu = site.data.keynsham.cpu %}
+{% assign cpu = site.data.de0-cv.cpu %}
 <p><strong>Manufacturer:</strong> {{ cpu.manufacturer }}</p>
 <p><strong>Model:</strong> {{ cpu.model }}</p>
 <p><strong>Clock Speed:</strong> {{ cpu.clock_speed }}</p>
@@ -24,14 +24,14 @@ layout: default
 <h2>Memory Map</h2>
 <table>
 <tr><th>Address</th><th>Size</th><th>Name</th></tr>
-{% for p in site.data.keynsham.peripherals | sort: "address" %}
+{% for p in site.data.de0-cv.peripherals | sort: "address" %}
   <tr><td>{{ p.address | HexFilter::as_hex }}</td><td>{{ p.size }}</td><td>{{ p.name }}</td></tr>
 {% endfor %}
 </table>
 
 <h2>Peripheral Register Maps</h2>
 
-{% for p in site.data.keynsham.peripherals | sort: "address" %}
+{% for p in site.data.de0-cv.peripherals | sort: "address" %}
 {% if p.regmap != null %}
 <h3>{{ p.name }}</h3>
 <table>
