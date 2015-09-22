@@ -92,3 +92,10 @@ Licensing
 
 This project is currently licensed under GPLv2 except for oldland-jtagd which
 is under the Apache License v2.0.
+
+About the Author
+----------------
+
+I'm [Jamie Iles](https://www.jamieiles.com/), you can reach me at
+<jamie@jamieiles.com>.  I'm a software engineer, working at Oracle, leading
+the Ksplice engineering team.
