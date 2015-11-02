@@ -56,29 +56,31 @@ Documentation
 Testing
 -------
 
-   - Clone [oldland-toolchain](https://github.com/jamieiles/oldland-toolchain)
-   and build with:
+   - Get the Docker images for the build environments:
 {% highlight bash %}
-git clone https://github.com/jamieiles/oldland-toolchain.git
-cd oldland-toolchain
-./build-oldland-elf
-. oldland-toolchain-env
+docker pull jamieiles/oldland-buildenv
 {% endhighlight %}
 
-   - Clone [oldland-cpu](https://github.com/jamieiles/oldland-cpu.git) and
-   build with:
+   - Clone [oldland-cpu](https://github.com/jamieiles/oldland-cpu.git):
 {% highlight bash %}
 git clone https://github.com/jamieiles/oldland-cpu.git
-cd oldland-cpu
-mkdir BUILD
-cd BUILD
-cmake -DCMAKE_ISNTALL_PREFIX:PATH=INSTALL_PREFIX ..
-make all install
+git submodule init
+git submodule update
 {% endhighlight %}
 
-   - Add `${INSTALL_PREFIX}/bin` to your path.
+   - Enter the build environment:
+{% highlight bash %}
+docker run -it -v $(pwd):/data/oldland jamieiles/oldland-buildenv /bin/bash
+{% endhighlight %}
 
-   - Run `oldland-test` to run the self-tests.
+   - Build, install and test inside the build environment:
+{% highlight bash %}
+mkdir BUILD
+cd BUILD
+cmake /data/oldland/oldland-cpu
+make all install -j16
+oldland-test
+{% endhighlight %}
 
 Running On Hardware
 -------------------
